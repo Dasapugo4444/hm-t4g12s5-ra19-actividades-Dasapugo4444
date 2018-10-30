@@ -1,4 +1,4 @@
-package co.edu.sena.programming.les04;
+package com.example;
 
 import com.example.domain.Employee;
 import com.example.domain.Engineer;

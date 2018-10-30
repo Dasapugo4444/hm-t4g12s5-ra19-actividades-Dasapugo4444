@@ -1,6 +1,4 @@
-package co.edu.sena.programming.les04.domain;
-
-import co.edu.sena.programming.les04.Employee;
+package com.example.domain;
 
 public class Manager extends Employee {
     private String deptName;
@@ -12,10 +10,5 @@ public class Manager extends Employee {
 
     public String getDeptName() {
         return deptName;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString()+"\nDepartment:      "+getDeptName();
     }
 }

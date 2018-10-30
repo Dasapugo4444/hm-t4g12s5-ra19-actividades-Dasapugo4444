@@ -1,4 +1,4 @@
-package co.edu.sena.programming.les03.uno;
+package co.edu.sena.programming.les03.domain;
 
 public class Employee {
 
@@ -7,7 +7,7 @@ public class Employee {
     private String ssn;
     private double salary;
 
-    public Employee(int empId,String name,String ssn,double salary){
+    public Employee(int empId,String name,String ssn,double salary) {
         this.empId=empId;
         this.name=name;
         this.ssn=ssn;
@@ -26,16 +26,15 @@ public class Employee {
         this.name = name;
     }
 
-    public String getSsn() {
-        return ssn;
-    }
-
     public double getSalary() {
         return salary;
     }
 
-    public void raiseSalary(double increase){
-
+    public String getSsn() {
+        return ssn;
     }
 
+    public void raiseSalary(double increase){
+        salary+=increase;
+    }
 }

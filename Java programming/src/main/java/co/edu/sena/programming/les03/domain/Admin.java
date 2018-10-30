@@ -1,4 +1,4 @@
-package co.edu.sena.programming.les03.uno;
+package co.edu.sena.programming.les03.domain;
 
 public class Admin extends Employee {
     public Admin(int empId, String name, String ssn, double salary) {

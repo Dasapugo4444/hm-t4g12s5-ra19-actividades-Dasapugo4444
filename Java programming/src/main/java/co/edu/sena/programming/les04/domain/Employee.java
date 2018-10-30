@@ -1,6 +1,4 @@
-package co.edu.sena.programming.les04;
-
-import java.text.NumberFormat;
+package com.example.domain;
 
 public class Employee {
 
@@ -45,15 +43,5 @@ public class Employee {
             salary += increase;
 
         }
-    }
-
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "empId=" + empId +
-                ", name='" + name + '\'' +
-                ", ssn='" + ssn + '\'' +
-                ", salary=" + NumberFormat.getCurrencyInstance().format(getSalary()) +
-                '}';
     }
 }
