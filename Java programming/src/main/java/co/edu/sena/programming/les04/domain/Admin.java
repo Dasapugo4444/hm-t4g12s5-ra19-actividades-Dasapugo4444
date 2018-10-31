@@ -1,4 +1,4 @@
-package com.example.domain;
+package co.edu.sena.programming.les04.domain;
 
 public class Admin extends Employee {
 

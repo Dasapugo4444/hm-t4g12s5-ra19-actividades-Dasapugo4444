@@ -1,4 +1,4 @@
-package com.example.domain;
+package co.edu.sena.programming.les04.domain;
 
 public class Director extends Manager {
 
@@ -11,5 +11,9 @@ public class Director extends Manager {
 
     public double getBudget() {
         return budget;
+    }
+
+    public String toString(){
+        return super.toString()+"\'Budget="+getBudget();
     }
 }

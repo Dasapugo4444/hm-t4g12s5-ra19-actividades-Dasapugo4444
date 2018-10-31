@@ -1,4 +1,6 @@
-package com.example.domain;
+package co.edu.sena.programming.les04.domain;
+
+import java.text.NumberFormat;
 
 public class Manager extends Employee {
     private String deptName;
@@ -10,5 +12,10 @@ public class Manager extends Employee {
 
     public String getDeptName() {
         return deptName;
+    }
+
+    @Override
+    public String toString(){
+        return super.toString() +", "+ "\'Department:" + getDeptName()+", ";
     }
 }

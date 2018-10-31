@@ -1,10 +1,8 @@
-package com.example;
+package co.edu.sena.programming.les04;
 
-import com.example.domain.Employee;
-import com.example.domain.Engineer;
-import com.example.domain.Manager;
-import com.example.domain.Admin;
-import com.example.domain.Director;
+import co.edu.sena.programming.les04.business.EmployeeStockPlan;
+import co.edu.sena.programming.les04.domain.*;
+
 import java.text.NumberFormat;
 
 public class EmployeeTest {
@@ -20,11 +18,16 @@ public class EmployeeTest {
 
         Director dir = new Director(12, "Susan Wheeler", "099-45-2340", 120_567.36, "Global Marketing", 1_000_000.00);
 
+        EmployeeStockPlan esp=new EmployeeStockPlan();
         // Print information about the objects you created
         printEmployee(eng);
-        printEmployee(adm);
+        printEmployee(eng,esp);
         printEmployee(mgr);
+        printEmployee(mgr,esp);
+        printEmployee(adm);
+        printEmployee(adm,esp);
         printEmployee(dir);
+        printEmployee(dir,esp);
 
         System.out.println("\nTesting raiseSalary and setName on Manager:");
         mgr.setName ("Barbara Johnson-Smythe");
@@ -34,11 +37,11 @@ public class EmployeeTest {
     }
 
     public static void printEmployee(Employee emp) {
-        System.out.println(); // Print a blank line as a separator
-        // Print out the data in this Employee object
-        System.out.println("Employee id:         " + emp.getEmpId());
-        System.out.println("Employee name:       " + emp.getName());
-        System.out.println("Employee Soc Sec #:  " + emp.getSsn());
-        System.out.println("Employee salary:     " + NumberFormat.getCurrencyInstance().format((double) emp.getSalary()));
+        System.out.println("Employee Type: "+emp.getClass().getSimpleName());
+        System.out.println(emp);
+
+    }
+    public static void printEmployee(Employee emp, EmployeeStockPlan esp){
+        System.out.println("Stock Options: "+esp.grantStock(emp));
     }
 }
